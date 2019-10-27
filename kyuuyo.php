@@ -1,8 +1,9 @@
 <?php
-$dbconn= pg_connect('host=localhost port=5432 dbname=postgres user=postgres password=korokoroyama');
-if(!$dbconn){
-//   exit('DB connect failed');
-}
+//共通ファイルの読み込み
+require_once('./common.php');
+ 
+//コネクション取得
+$conn = getConnection();  //←共通ファイルのfunctionが使える
 ?>
 <html>
   <head>

@@ -55,14 +55,12 @@ echo "ページ作成日時：".date("Y年m月d日")."-".date("H:i:s")."<br>";
 //require 'php/class.php';
 
 //★★DB接続
-$dbname="postgres";
-$usern="postgres";//接続ユーザ名
-$passw="korokoroyama";//ユーザパスワード
-$conn = "host=localhost dbname=".$dbname." user=".$usern." password=".$passw;
-$link = pg_connect($conn);
-if (!$link) {
-              die('接続失敗です。'.pg_last_error());
-}
+//共通ファイルの読み込み
+require_once('./common.php');
+ 
+//コネクション取得
+$conn = getConnection();  //←共通ファイルのfunctionが使える
+
 
 //★★SQL作成
 $sqlact="select * ";

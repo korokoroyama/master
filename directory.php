@@ -13,6 +13,7 @@ function loop($path,$x,$home,$webpath){
 		'test2',
 		'js',
 		'html',
+		'.git',
 //		'jquery.scrolltable.js',
 	);
 	$x++;
