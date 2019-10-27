@@ -1,6 +1,6 @@
 <?php
 //共通ファイルの読み込み
-require_once('./common.php');
+require_once('../common.php');
  
 //コネクション取得
 $conn = getConnection();  //←共通ファイルのfunctionが使える
